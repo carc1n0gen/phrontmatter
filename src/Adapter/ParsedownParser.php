@@ -8,7 +8,8 @@ use Parsedown;
 /**
  * An adapter to the Parsedown markdown parser.
  */
-class ParsedownParser implements ParserInterface {
+class ParsedownParser implements ParserInterface
+{
     
     /**
      * @var Parsedown

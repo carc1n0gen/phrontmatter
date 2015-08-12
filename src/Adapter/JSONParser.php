@@ -7,7 +7,8 @@ use Carc1n0gen\PhrontMatter\ParserInterface;
 /**
  * An adapter to the built in json parser function.
  */
-class JSONParser implements ParserInterface {
+class JSONParser implements ParserInterface
+{
     
     public function parse($json)
     {

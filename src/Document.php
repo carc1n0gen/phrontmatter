@@ -5,7 +5,7 @@ namespace Carc1n0gen\PhrontMatter;
 /**
  * Document.
  */
-class Document 
+class Document
 {
     
     /**
@@ -18,7 +18,8 @@ class Document
      */
     private $content;
     
-    public function __construct($frontMatter, $content) {
+    public function __construct($frontMatter, $content) 
+    {
         $this->frontMatter = $frontMatter;
         $this->content = $content;
     }

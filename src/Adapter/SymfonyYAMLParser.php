@@ -8,7 +8,8 @@ use Symfony\Component\Yaml\Parser;
 /**
  * An adapter to the YAML parser from Symphony.
  */
-class SymfonyYAMLParser implements ParserInterface {
+class SymfonyYAMLParser implements ParserInterface
+{
     
     /**
      * @var \Symfony\Component\Yaml\Parser

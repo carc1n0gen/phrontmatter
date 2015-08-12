@@ -5,7 +5,7 @@ namespace Carc1n0gen\PhrontMatter;
 /**
  * Describes a template for parsing strings.
  */
-interface DocumentParserInterface 
+interface DocumentParserInterface
 {
     
     /**

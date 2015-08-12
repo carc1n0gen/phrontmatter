@@ -9,9 +9,9 @@ use Carc1n0gen\PhrontMatter\Adapter\SymfonyYAMLParser;
  * A document parser implementation which defaults to YAML frontmatter, and
  * markdown content parsing.
  *
- * @author Carson
+ * @author carc1n0gen
  */
-class Parser implements ParserInterface 
+class Parser implements ParserInterface
 {
     
     /**
@@ -40,7 +40,8 @@ class Parser implements ParserInterface
      * @param string $startSep
      * @param string $endSep
      */
-    public function __construct(ParserInterface $frontMatterParser = null, ParserInterface $contentParser = null, $startSep = '---', $endSep = '---') {
+    public function __construct(ParserInterface $frontMatterParser = null, ParserInterface $contentParser = null, $startSep = '---', $endSep = '---')
+    {
         $this->frontMatterParser = $frontMatterParser ?: new SymfonyYAMLParser();
         $this->contentParser = $contentParser ?: new ParsedownParser();
         $this->startSep = array_filter((array) $startSep, 'is_string') ?: array('---');
@@ -70,7 +71,8 @@ class Parser implements ParserInterface
             .implode('|', array_map('preg_quote', $this->endSep))   // $matches[3] end separator
             ."){1}[\r\n|\n]*(.*)$~s";                               // $matches[4] document content
         
-        if (preg_match($regex, $str, $matches) === 1) { // There is a Front matter
+        if (preg_match($regex, $str, $matches) === 1) // if front matter is detected
+        {
             $frontMatter = trim($matches[2]) !== '' ? $this->frontMatterParser->parse(trim($matches[2])) : null;
             $str = ltrim($matches[4]);
         }
