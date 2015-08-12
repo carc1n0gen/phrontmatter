@@ -2,8 +2,8 @@
 
 namespace Carc1n0gen\PhrontMatter;
 
-use Carc1n0gen\PhrontMatter\Adapter\ParsedownParser;
-use Carc1n0gen\PhrontMatter\Adapter\SymfonyYAMLParser;
+use Carc1n0gen\PhrontMatter\Adapter\ParsedownAdapter;
+use Carc1n0gen\PhrontMatter\Adapter\SymfonyYAMLAdapter;
 
 /**
  * A document parser implementation which defaults to YAML frontmatter, and
@@ -42,8 +42,8 @@ class Parser implements ParserInterface
      */
     public function __construct(ParserInterface $frontMatterParser = null, ParserInterface $contentParser = null, $startSep = '---', $endSep = '---')
     {
-        $this->frontMatterParser = $frontMatterParser ?: new SymfonyYAMLParser();
-        $this->contentParser = $contentParser ?: new ParsedownParser();
+        $this->frontMatterParser = $frontMatterParser ?: new SymfonyYAMLAdapter();
+        $this->contentParser = $contentParser ?: new ParsedownAdapter();
         $this->startSep = array_filter((array) $startSep, 'is_string') ?: array('---');
         $this->endSep = array_filter((array) $endSep, 'is_string') ?: array('---');
     }

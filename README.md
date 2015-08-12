@@ -50,12 +50,12 @@ adapters for YAML, and JSON.  So you could also write the front matter in JSON.
 
 ```php
 use \Carc1n0gen\PhrontMatter\Parser;
-use \Carc1n0gen\PhrontMatter\Adapter\JSONParser;
+use \Carc1n0gen\PhrontMatter\Adapter\JSONAdapter;
 
 // Create in instance of the JSON parser adapter.
-$adapter = new JSONParser();
+$adapter = new JSONAdapter();
 
-// Create a Parser instance with a custom front matter parser.
+// Create a Parser instance with a custom front matter adapter.
 $parser = new Parser($adapter);
 
 $document = $parser->parse(file_get_contents('path/to/markdown/file'));
@@ -83,7 +83,7 @@ print_r($document->getFrontMatter());
 // )
 ```
 
-### Custom Adapters
+### Custom Parser Adapters
 
 The Parser class cunstructor signature is `public function __construct(ParserInterface $frontMatterParser = null, ParserInterface $contentParser = null, $startSep = '---', $endSep = '---')`.  
 
