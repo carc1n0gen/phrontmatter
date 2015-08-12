@@ -22,3 +22,14 @@ $document = $parser->parse(file_get_contents('path/to/markdown/file'));
 //   lastName: Smith
 // ---
 print_r($document->getFrontMatter());
+
+// Returns:
+// Array
+// (
+//     [author] => Array
+//         (
+//             [firstName] => John
+//             [lastName] => Smith
+//         )
+// 
+// )
