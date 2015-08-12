@@ -33,3 +33,6 @@ print_r($document->getFrontMatter());
 //         )
 // 
 // )
+```
+
+The parsed document content can be accessed with `$document->getContent()`.
