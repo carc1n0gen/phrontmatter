@@ -40,7 +40,7 @@ The parsed document content can be accessed with `$document->getContent()`.
 ## Different Front Matter Formats
 
 PhrontMatter allows you to write your front matter in any format you like, and comes with two built in
-parsers for YAML, and JSON.  So you could also write the front matter in JSON.
+adapters for YAML, and JSON.  So you could also write the front matter in JSON.
 
 ### JSON Front Matter
 
