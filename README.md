@@ -3,7 +3,7 @@
 A PHP library for parsing documents with frontmatter.
 
 By default, documents are parsed as markdown with YAML front matter.  The front 
-matter begins and ends with "---" like [Jekyll](http://jekyllrb.com/docs/frontmatter/)
+matter begins and ends with "---" like <a href="http://jekyllrb.com/docs/frontmatter/" target="_blank">Jekyll</a>
 
 ## Example
 
