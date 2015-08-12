@@ -56,6 +56,14 @@ class Parser implements ParserInterface
     public function parse($str, $parseContent = true)
     {
         $frontMatter = null;
+
+        /**
+         * BEGIN CREDIT: FrontYAML
+         * https://github.com/mnapoli/FrontYAML
+         *
+         * @copyright Matthieu Napoli http://mnapoli.fr
+         * @license   http://www.opensource.org/licenses/mit-license.php MIT (see the LICENSE file)
+         */
         $regex = '~^('
             .implode('|', array_map('preg_quote', $this->startSep)) // $matches[1] start separator
             ."){1}[\r\n|\n]*(.*?)[\r\n|\n]+("                       // $matches[2] between separators
@@ -68,6 +76,9 @@ class Parser implements ParserInterface
         }
         
         return new Document($frontMatter, $parseContent ? $this->contentParser->parse($str) : $str);
+        /*
+         * END CREDIT: FrontYAML
+         **/
     }
     
 }
