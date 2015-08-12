@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * PhrontMatter
+ *
+ * @copyright Carson Evans http://carsonevans.ca/
+ * @license http://www.opensource.org/licenses/mit-license.php MIT (see the LICENSE.txt)
+ */
+
 namespace Carc1n0gen\PhrontMatter;
 
 use Carc1n0gen\PhrontMatter\Adapter\ParsedownAdapter;
