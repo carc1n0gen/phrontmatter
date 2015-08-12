@@ -37,6 +37,10 @@ print_r($document->getFrontMatter());
 
 The parsed document content can be accessed with `$document->getContent()`.
 
+You can provide `false` as the second parameter to `$parser->parse` if you wish
+to leave the document content as is with no parsing.  For example, if the document 
+content is in HTML format and does not need parsing.
+
 ## Different Front Matter Formats
 
 PhrontMatter allows you to write your front matter in any format you like, and comes with two built in
