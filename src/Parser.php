@@ -50,7 +50,7 @@ class Parser implements ParserInterface
     
     /**
      * @param string $str - The raw string to parse.
-     * @param boolean $parseContent - Should the content below the frontmatter be parsed?
+     * @param boolean $parseContent - Should the content below the front matter be parsed?
      *
      * @return \Carc1n0gen\Phrontmatter\Document
      */
