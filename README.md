@@ -5,6 +5,10 @@ A PHP library for parsing documents with frontmatter.
 By default, documents are parsed as markdown with YAML front matter.  The front 
 matter begins and ends with "---" like <a href="http://jekyllrb.com/docs/frontmatter/" target="_blank">Jekyll</a>
 
+## Install
+
+$ `composer require carc1n0gen/phrontmatter`
+
 ## Example
 
 ```php
