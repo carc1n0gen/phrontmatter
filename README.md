@@ -89,7 +89,14 @@ print_r($document->getFrontMatter());
 
 ### Custom Parser Adapters
 
-The Parser class cunstructor signature is `public function __construct(ParserInterface $frontMatterParser = null, ParserInterface $contentParser = null, $startSep = '---', $endSep = '---')`.  
+The Parser class cunstructor signature is: 
+
+```
+public function __construct(ParserInterface $frontMatterParser = null,
+                            ParserInterface $contentParser = null,
+                            $startSep = '---',
+                            $endSep = '---')
+```  
 
 You can supply the constructor with your own front matter parsing adapter in the case you want to use another format besides YAML or JSON, You could supply the consturctor with your own content
 parsing adapter in the case you want to write the document content in a format other than markdown, and you can supply the constructor with custom begin/end separators for the front matter
