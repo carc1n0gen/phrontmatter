@@ -67,7 +67,7 @@ $document = $parser->parse(file_get_contents('path/to/markdown/file'));
 // If the front matter contaned:
 // ---
 // {
-// 	   "author": {
+//     "author": {
 //         "firstName": "John",
 //         "lastName": "Smith"
 //     }
